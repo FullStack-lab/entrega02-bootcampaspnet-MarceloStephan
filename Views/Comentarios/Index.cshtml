@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Comentario>
+
+<h2>Comentários</h2>
+@foreach (var comentario in Model)
+{
+    <div>
+        <p><strong>@comentario.Autor</strong> (@comentario.DataCriacao): @comentario.Texto</p>
+        <a href="@Url.Action("Detalhes", "Comentarios", new { id = comentario.Id })">Ver Respostas</a>
+        <a href="@Url.Action("Responder", "Comentarios", new { id = comentario.Id })">Responder</a>
+    </div>
+}
+
+<a href="@Url.Action("Criar", "Comentarios")">Novo Comentário</a>

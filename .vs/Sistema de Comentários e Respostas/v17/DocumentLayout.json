@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\marce\\Desktop\\Programa\u00E7\u00E3o\\1 - Bootcamp\\Projetos Avaliativos\\Sistema de Coment\u00E1rios e Respostas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D35F7F68-1D92-45B1-90EC-F12C9FB4DDCC}|Sistema de Coment\u00E1rios e Respostas.csproj|c:\\users\\marce\\desktop\\programa\u00E7\u00E3o\\1 - bootcamp\\projetos avaliativos\\sistema de coment\u00E1rios e respostas\\models\\comentario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D35F7F68-1D92-45B1-90EC-F12C9FB4DDCC}|Sistema de Coment\u00E1rios e Respostas.csproj|solutionrelative:models\\comentario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D35F7F68-1D92-45B1-90EC-F12C9FB4DDCC}|Sistema de Coment\u00E1rios e Respostas.csproj|c:\\users\\marce\\desktop\\programa\u00E7\u00E3o\\1 - bootcamp\\projetos avaliativos\\sistema de coment\u00E1rios e respostas\\views\\comentarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D35F7F68-1D92-45B1-90EC-F12C9FB4DDCC}|Sistema de Coment\u00E1rios e Respostas.csproj|solutionrelative:views\\comentarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D35F7F68-1D92-45B1-90EC-F12C9FB4DDCC}|Sistema de Coment\u00E1rios e Respostas.csproj|c:\\users\\marce\\desktop\\programa\u00E7\u00E3o\\1 - bootcamp\\projetos avaliativos\\sistema de coment\u00E1rios e respostas\\models\\forumcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D35F7F68-1D92-45B1-90EC-F12C9FB4DDCC}|Sistema de Coment\u00E1rios e Respostas.csproj|solutionrelative:models\\forumcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D35F7F68-1D92-45B1-90EC-F12C9FB4DDCC}|Sistema de Coment\u00E1rios e Respostas.csproj|c:\\users\\marce\\desktop\\programa\u00E7\u00E3o\\1 - bootcamp\\projetos avaliativos\\sistema de coment\u00E1rios e respostas\\controllers\\comentarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D35F7F68-1D92-45B1-90EC-F12C9FB4DDCC}|Sistema de Coment\u00E1rios e Respostas.csproj|solutionrelative:controllers\\comentarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,28 +30,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ForumContext.cs",
-              "DocumentMoniker": "C:\\Users\\marce\\Desktop\\Programa\u00E7\u00E3o\\1 - Bootcamp\\Projetos Avaliativos\\Sistema de Coment\u00E1rios e Respostas\\Models\\ForumContext.cs",
-              "RelativeDocumentMoniker": "Models\\ForumContext.cs",
-              "ToolTip": "C:\\Users\\marce\\Desktop\\Programa\u00E7\u00E3o\\1 - Bootcamp\\Projetos Avaliativos\\Sistema de Coment\u00E1rios e Respostas\\Models\\ForumContext.cs",
-              "RelativeToolTip": "Models\\ForumContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T19:39:08.573Z",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\marce\\Desktop\\Programa\u00E7\u00E3o\\1 - Bootcamp\\Projetos Avaliativos\\Sistema de Coment\u00E1rios e Respostas\\Views\\Comentarios\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Comentarios\\Index.cshtml",
+              "ToolTip": "C:\\Users\\marce\\Desktop\\Programa\u00E7\u00E3o\\1 - Bootcamp\\Projetos Avaliativos\\Sistema de Coment\u00E1rios e Respostas\\Views\\Comentarios\\Index.cshtml",
+              "RelativeToolTip": "Views\\Comentarios\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-15T20:12:42.76Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Comentario.cs",
-              "DocumentMoniker": "C:\\Users\\marce\\Desktop\\Programa\u00E7\u00E3o\\1 - Bootcamp\\Projetos Avaliativos\\Sistema de Coment\u00E1rios e Respostas\\Models\\Comentario.cs",
-              "RelativeDocumentMoniker": "Models\\Comentario.cs",
-              "ToolTip": "C:\\Users\\marce\\Desktop\\Programa\u00E7\u00E3o\\1 - Bootcamp\\Projetos Avaliativos\\Sistema de Coment\u00E1rios e Respostas\\Models\\Comentario.cs",
-              "RelativeToolTip": "Models\\Comentario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ComentariosController.cs",
+              "DocumentMoniker": "C:\\Users\\marce\\Desktop\\Programa\u00E7\u00E3o\\1 - Bootcamp\\Projetos Avaliativos\\Sistema de Coment\u00E1rios e Respostas\\Controllers\\ComentariosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ComentariosController.cs",
+              "ToolTip": "C:\\Users\\marce\\Desktop\\Programa\u00E7\u00E3o\\1 - Bootcamp\\Projetos Avaliativos\\Sistema de Coment\u00E1rios e Respostas\\Controllers\\ComentariosController.cs",
+              "RelativeToolTip": "Controllers\\ComentariosController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T19:37:31.2Z",
+              "WhenOpened": "2024-12-15T19:55:10.877Z",
               "EditorCaption": ""
             }
           ]
