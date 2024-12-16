@@ -1,13 +1,25 @@
 ﻿@model IEnumerable<Comentario>
 
 <h2>Comentários</h2>
+<a href="@Url.Action("Criar", "Comentarios")" class="btn btn-primary">Novo Comentário</a>
+
 @foreach (var comentario in Model)
 {
-    <div>
-        <p><strong>@comentario.Autor</strong> (@comentario.DataCriacao): @comentario.Texto</p>
-        <a href="@Url.Action("Detalhes", "Comentarios", new { id = comentario.Id })">Ver Respostas</a>
-        <a href="@Url.Action("Responder", "Comentarios", new { id = comentario.Id })">Responder</a>
+    <div style="border: 1px solid #ddd; margin: 10px 0; padding: 10px;">
+        <p>
+            <strong>@comentario.Autor</strong> - @comentario.DataCriacao.ToString("dd/MM/yyyy HH:mm")
+        </p>
+        <p>@comentario.Texto</p>
+        <p>
+            <strong>Respostas:</strong> @(comentario.Respostas != null ? comentario.Respostas.Count : 0)
+        </p>
+
+
+        <p>
+            <a href="@Url.Action("Detalhes", "Comentarios", new { id = comentario.Id })">Ver Respostas</a> |
+            <a href="@Url.Action("Editar", "Comentarios", new { id = comentario.Id })">Editar</a> |
+            <a href="@Url.Action("Excluir", "Comentarios", new { id = comentario.Id })">Excluir</a> |
+            <a href="@Url.Action("Responder", "Comentarios", new { id = comentario.Id })">Responder</a>
+        </p>
     </div>
 }
-
-<a href="@Url.Action("Criar", "Comentarios")">Novo Comentário</a>

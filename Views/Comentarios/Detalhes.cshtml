@@ -1,0 +1,32 @@
+﻿@model Comentario
+
+<h2>Detalhes do Comentário</h2>
+
+<div style="border: 1px solid #ddd; margin-bottom: 20px; padding: 10px;">
+    <p>
+        <strong>@Model.Autor</strong> - @Model.DataCriacao.ToString("dd/MM/yyyy HH:mm")
+    </p>
+    <p>@Model.Texto</p>
+</div>
+
+<h3>Respostas</h3>
+
+@if (Model.Respostas != null && Model.Respostas.Any())
+{
+    foreach (var resposta in Model.Respostas)
+    {
+        <div style="border: 1px dashed #ddd; margin: 10px 0; padding: 10px;">
+            <p>
+                <strong>@resposta.Autor</strong> - @resposta.DataCriacao.ToString("dd/MM/yyyy HH:mm")
+            </p>
+            <p>@resposta.Texto</p>
+        </div>
+    }
+}
+else
+{
+    <p>Não há respostas ainda.</p>
+}
+
+<a href="@Url.Action("Responder", "Comentarios", new { id = Model.Id })" class="btn btn-primary">Responder</a>
+<a href="@Url.Action("Index", "Comentarios")" class="btn btn-secondary">Voltar</a>

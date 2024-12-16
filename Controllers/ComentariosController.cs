@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -14,6 +15,7 @@ namespace Sistema_de_Comentários_e_Respostas.Controllers
             var comentarios = db.Comentarios
                 .Where(c => c.ComentarioPaiId == null)
                 .OrderByDescending(c => c.DataCriacao)
+                .Include(c => c.Respostas)
                 .ToList();
             return View(comentarios);
         }
@@ -24,6 +26,11 @@ namespace Sistema_de_Comentários_e_Respostas.Controllers
 
             return View(comentario);
         }
+        public ActionResult Criar()
+        {
+            return View();
+        }
+
         [HttpPost]
         public ActionResult Criar(Comentario comentario)
         {
@@ -38,8 +45,18 @@ namespace Sistema_de_Comentários_e_Respostas.Controllers
         }
         public ActionResult Responder(int id)
         {
-            ViewBag.ComentarioPaiId = id;
-            return View();
+            var comentarioPai = db.Comentarios.Find(id);
+            if (comentarioPai == null)
+            {
+                return HttpNotFound();
+            }
+
+            var novoComentario = new Comentario
+            {
+                ComentarioPaiId = id
+            };
+
+            return View(novoComentario);
         }
         [HttpPost]
         public ActionResult Responder(Comentario comentario)
@@ -47,16 +64,28 @@ namespace Sistema_de_Comentários_e_Respostas.Controllers
             if (ModelState.IsValid)
             {
                 comentario.DataCriacao = DateTime.Now;
+
+                if (comentario.ComentarioPaiId.HasValue)
+                {
+                    var comentarioPai = db.Comentarios.Find(comentario.ComentarioPaiId.Value);
+                    if (comentarioPai == null)
+                    {
+                        return HttpNotFound();
+                    }
+                }
+
                 db.Comentarios.Add(comentario);
                 db.SaveChanges();
                 return RedirectToAction("Detalhes", new { id = comentario.ComentarioPaiId });
             }
             return View(comentario);
         }
-        public ActionResult Editar(int id)
+        public ActionResult Editar(int id, string texto)
         {
+            
             var comentario = db.Comentarios.Find(id);
-            if (comentario == null) return HttpNotFound();
+            if (comentario == null)
+                return HttpNotFound();
 
             return View(comentario);
         }
@@ -66,9 +95,14 @@ namespace Sistema_de_Comentários_e_Respostas.Controllers
         {
             if (ModelState.IsValid)
             {
+                var comentarioExistente = db.Comentarios.AsNoTracking().FirstOrDefault(c => c.Id == comentario.Id);
+                if (comentarioExistente == null)
+                    return HttpNotFound();
+                comentario.DataCriacao = comentarioExistente.DataCriacao;
+
                 db.Entry(comentario).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Detalhes", new { id = comentario.Id });
+                return RedirectToAction("Index");
             }
             return View(comentario);
         }
@@ -86,10 +120,17 @@ namespace Sistema_de_Comentários_e_Respostas.Controllers
             var comentario = db.Comentarios.Include("Respostas").FirstOrDefault(c => c.Id == id);
             if (comentario != null)
             {
+                var respostas = db.Comentarios.Where(c => c.ComentarioPaiId == id).ToList();
+                foreach (var resposta in respostas)
+                {
+                    db.Comentarios.Remove(resposta);
+                }
                 db.Comentarios.Remove(comentario);
                 db.SaveChanges();
             }
+
             return RedirectToAction("Index");
         }
+
     }
 }

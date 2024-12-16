@@ -1,0 +1,23 @@
+﻿@model Comentario
+
+<h2>Criar Novo Comentário</h2>
+
+@using (Html.BeginForm("Criar", "Comentarios", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        <label for="Texto">Texto</label>
+        @Html.TextAreaFor(m => m.Texto, new { @class = "form-control", maxlength = "500" })
+        @Html.ValidationMessageFor(m => m.Texto)
+    </div>
+
+    <div class="form-group">
+        <label for="Autor">Autor</label>
+        @Html.TextBoxFor(m => m.Autor, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Autor)
+    </div>
+
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    <a href="@Url.Action("Index", "Comentarios")" class="btn btn-secondary">Voltar</a>
+}

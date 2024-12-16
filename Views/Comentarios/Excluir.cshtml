@@ -1,0 +1,21 @@
+﻿@model Comentario
+
+<h2>Excluir Comentário</h2>
+
+<div style="border: 1px solid #ddd; padding: 10px;">
+    <p>
+        <strong>@Model.Autor</strong> - @Model.DataCriacao.ToString("dd/MM/yyyy HH:mm")
+    </p>
+    <p>@Model.Texto</p>
+</div>
+
+<p>Você tem certeza de que deseja excluir este comentário?</p>
+
+@using (Html.BeginForm("Excluir", "Comentarios", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m => m.Id)
+    <button type="submit" class="btn btn-danger">Excluir</button>
+    <a href="@Url.Action("Index", "Comentarios")" class="btn btn-secondary">Cancelar</a>
+}
+

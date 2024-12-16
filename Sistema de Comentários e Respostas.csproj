@@ -188,6 +188,11 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Comentarios\Index.cshtml" />
+    <Content Include="Views\Comentarios\Detalhes.cshtml" />
+    <Content Include="Views\Comentarios\Criar.cshtml" />
+    <Content Include="Views\Comentarios\Responder.cshtml" />
+    <Content Include="Views\Comentarios\Editar.cshtml" />
+    <Content Include="Views\Comentarios\Excluir.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
